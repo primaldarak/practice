@@ -1,0 +1,323 @@
+.fontWeight,
+html .container header .header__image .header__text,
+body .container header .header__image .header__text,
+html .container main h2,
+body .container main .main-row h2,
+html .container main .main-row #main-row__hot-tours,
+body .container main .main-row #main-row__hot-tours,
+html .container main .main-row .search-individual-tour h3,
+body .container main .main-row .search-individual-tour h3 {
+    font-family: system-ui;
+    font-weight: 200;
+}
+
+%fontSize14 {
+    font-size: 14px;
+}
+
+%fontSize12 {
+    font-size: 12px;
+}
+
+@mixin cardImage {
+    height: 100%;
+    min-height: 5vw;
+    align-self: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: top;
+}
+
+@each $name, $img in $imgUrl {
+    .card__image-#{$name} {
+        background-image: url($img);
+        @include cardImage;
+    }
+}
+
+html,
+body {
+    margin: 0;
+}
+
+.container {
+    header {
+        .header__image {
+            height: 100vh;
+            background-image: $bgcontent;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-y: top;
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 50%;
+            min-height: 650px;
+            min-width: 1500px;
+
+            nav {
+                display: grid;
+
+                ul {
+                    width: 40vw;
+                    font-size: 1em;
+                    display: grid;
+                    grid-template-columns: repeat(10, 1fr);
+                    align-items: center;
+
+                    li {
+                        @include navLi;
+
+                        &:hover {
+                            color: #8695a2;
+                        }
+                    }
+                }
+            }
+
+            .header__text {
+                padding: 5vw;
+                margin: 8vw auto;
+                font-size: 2em;
+                color: #ddd;
+                text-align: center;
+                width: 50vw;
+
+                button {
+                    background: transparent;
+                    border: 1px solid gray;
+                    color: gray;
+                    padding: 1vw 2vw;
+                    margin-top: 30px;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: white;
+                        background-color: #0000005e;
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        h2 {
+            margin: 0px 0px 10px 0px;
+            font-size: 2em;
+            text-align: center;
+        }
+
+        .main-row {
+            display: grid;
+            gap: 3vw;
+            margin: 0vw 20vw;
+            justify-content: center;
+
+            .main-card {
+                display: grid;
+                box-shadow: 0 0 10px gray;
+                grid-template-columns: 1fr 3fr;
+
+                h2 {
+                    color: #8695a2;
+                    margin: 20px 0px 0px 0px;
+                    font-size: 30px;
+                }
+
+                .main-card__text {
+                    color: #395369;
+                    padding: 2vh;
+                    align-content: center;
+                    display: grid;
+
+                    p {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        .main-review {
+            background-color: $review-bg;
+            width: 80vw;
+            display: grid;
+            padding: 1vw;
+            margin-top: 30px;
+
+            h2 {
+                color: #cba2b0;
+                font-size: 2em;
+                margin-bottom: 1vw;
+            }
+
+            .reviews {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                column-gap: 1vw;
+
+                .review-card {
+                    padding: 1vh;
+                    display: grid;
+                    background: $review-card-bg;
+                    grid-template-columns: 1fr 3fr;
+
+                    .circle-image {
+                        width: 10vh;
+                        height: 10vh;
+                        border-radius: 50%;
+                    }
+
+                    .review-card__text {
+                        display: grid;
+                        padding: 0 2vh;
+                        align-content: center;
+                        color: white;
+                        font-size: 11px;
+
+                        span {
+                            font-style: italic;
+                        }
+                    }
+                }
+            }
+        }
+
+        .search-individual-tour {
+            width: 50vw;
+            min-width: 30rem;
+            padding: 1vw;
+            background-color: $search-bg;
+            margin-top: 30px;
+
+            h3 {
+                font-size: 2em;
+                text-align: center;
+                color: $search-h3;
+                margin: 20px;
+            }
+
+            .search-form {
+                display: flex;
+                justify-content: space-between;
+                margin: 0px 20px 0px 20px;
+                // max-width: 520px;
+
+                .search-form-inputs {
+                    font-size: 0.85rem;
+                    padding: 0.5vh;
+                    border: 0;
+                    border-radius: 0;
+                    background-color: #8695a2;
+                    border-bottom: 1px solid $border-bottom;
+                    color: #5e6872;
+                    width: 6.5rem;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    display: flex;
+    height: 100%;
+    padding: 1vw 0 2vw;
+    background: $footer-bg;
+    margin-top: 8vh;
+
+    h3 {
+        @extend %fontSize14;
+    }
+
+    .social-network {
+        padding-left: 2vw;
+        flex: 2;
+
+        h3 {
+            color: #659afe;
+            margin: 0 0 1vw 0;
+        }
+
+        img {
+            width: 2vw;
+            height: 2vw;
+            padding-right: 1vw;
+        }
+
+        .social-network__copyright {
+            color: #0a275e;
+            padding-top: 2vw;
+            @extend %fontSize12;
+        }
+    }
+
+    .footer__menu {
+        flex: 1;
+
+        h3 {
+            margin: 0 0 0.5vw;
+            color: #659afe;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0 0 0 1vw;
+            width: 100%;
+
+            li {
+                list-style-type: none;
+                @extend %fontSize12;
+
+                a {
+                    color: #467ade;
+                    text-decoration: none;
+                    font-size: 1em;
+
+                    &:hover {
+                        color: #0a275e;
+                    }
+                }
+            }
+        }
+    }
+
+    .feedback_and_payments {
+        flex: 2;
+
+        .send-email {
+            padding-right: 2vw;
+
+            button {
+                margin-top: 1vw;
+                background: $button-bg;
+                padding: 0.5vw;
+                width: 100%;
+                border: 0;
+                cursor: pointer;
+                color: white;
+
+                &:hover {
+                    background: #659afe;
+                    color: white;
+                }
+            }
+
+            input {
+                width: 97%;
+                border: 0;
+                padding: 0.5vw;
+                color: #76769f;
+            }
+        }
+
+        .payments {
+            h3 {
+                color: #659afe;
+                margin: 1vw 0 0;
+                @extend %fontSize14;
+            }
+
+            img {
+                width: 3vw;
+                padding-right: 1vw;
+            }
+        }
+    }
+}

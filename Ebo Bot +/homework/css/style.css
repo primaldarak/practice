@@ -1,0 +1,276 @@
+html {
+  font-family: 'Montserrat';
+  background-color: #C4C4C4AD ;
+}
+
+html h2 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4vw;
+  line-height: 3.5vw;
+  margin: 0;
+  color: #079FD0;
+}
+
+html p {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 2vw;
+  line-height: 2vw;
+  margin: 0;
+  margin-top: 2vw;
+  margin-bottom: 3vw;
+  color: #000000;
+}
+
+html .l-m {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5vw;
+  line-height: 2vw;
+  text-transform: uppercase;
+  color: #079FD0;
+  text-decoration: none;
+}
+
+.arrow {
+  border: solid #079FD0;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 0.5vw;
+  transform: rotate(-45deg);
+}
+
+header {
+  display: flex;
+  margin: 1vw 2vw 1vw 2vw;
+}
+
+header img {
+  width: 8vw;
+  height: 2vw;
+  align-self: center;
+  margin-bottom: 0.5vw;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-transform: uppercase;
+  width: 35vw;
+  margin-left: 0.5vw;
+}
+
+header nav a {
+  text-decoration: none;
+  color: black;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1vw;
+  line-height: 3vw;
+}
+
+header button {
+  margin-left: auto;
+  background-color: #01B6D4;
+  border-radius: 10px;
+  border: #01B6D4;
+  height: 3.5vw;
+  width: 14vw;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1vw;
+  line-height: 15px;
+  color: #ffffff;
+}
+
+header button:hover {
+  cursor: pointer;
+}
+
+.container {
+  width: 94vw;
+  height: 87vh;
+  display: flex;
+  align-items: center;
+}
+
+.background {
+  display: flex;
+  align-items: center;
+  background-color: #C4C4C4;
+  width: 80vw;
+  height: 87vh;
+  margin-left: 2vw;
+  position: absolute;
+}
+
+.main-text {
+  margin-left: 7vw;
+}
+
+.main-text h1 {
+  margin: 0;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22vw;
+  line-height: 18vw;
+  letter-spacing: -0.05em;
+  text-transform: lowercase;
+  color: #000000;
+}
+
+.main-text h2 {
+  margin: 2vw 0px 2vw 0px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 5vw;
+  line-height: 4vw;
+
+  font-variant: small-caps;
+  color: #FFFFFF;
+}
+
+.main-text h3 {
+  margin: 0;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2vw;
+  line-height: 2.5vw;
+
+  text-transform: lowercase;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.ebo-img {
+  width: 42vw;
+  height: 28vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../img/main.png);
+  margin-left: auto;
+  position: relative;
+}
+
+.mimic-info {
+  width: 90vw;
+  height: 30vw;
+  margin: 6vw 2vw 3vw 2vw;
+  display: flex;
+}
+
+.mimic-img {
+  background-image: url(../img/cat1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 30vw;
+  flex: 1.5;
+}
+
+.mimic-text {
+  flex: 1;
+}
+
+.mood-info {
+  width: 90vw;
+  height: 30vw;
+  margin: 6vw 2vw 3vw 2vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.mood-img {
+  background-image: url(../img/cat2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 30vw;
+  flex: 1;
+}
+
+.mood-text {
+  flex: 1;
+  margin-left: 5vw;
+  margin-right: 9vw;
+}
+
+.can-container {
+  width: 98vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.can-container h2 {
+  font-size: 3.2vw;
+  margin-bottom: 5vw;
+
+}
+
+.can-info {
+  width: 95vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.can-info h2 {
+  font-size: 2.4vw;
+  margin-bottom: 2vw;
+  margin-top: 2vw;
+}
+
+.can-info p {
+  font-size: 1.7vw;
+}
+
+.can-img {
+  width: 25vw;
+  height: 18.5vw;
+}
+
+.can {
+  width: 25vw;
+  height: 40vw;
+}
+
+footer {
+  margin-top: 4vw;
+  display: flex;
+  background:#C4C4C433 ;
+  justify-content: space-between;
+}
+
+footer img {
+  width: 8vw;
+  height: 2vw;
+  align-self: center;
+  margin-bottom: 0.5vw;
+  align-self: flex-start;
+  margin-top: 2vw;
+  margin-left: 2vw;
+}
+
+footer li {
+  list-style-type: none;
+  text-transform: capitalize;
+  font-size: 1.5vw;
+  line-height: 3.5vw;
+  font-style: normal;
+  font-weight: 400;
+}
+footer li:hover{
+  cursor: pointer;
+}
+
+footer p {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1vw;
+line-height: 1.5vw;
+margin-right: 2vw;
+}

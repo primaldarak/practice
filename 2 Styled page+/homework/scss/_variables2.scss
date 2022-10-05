@@ -1,0 +1,22 @@
+$bgcontent: url("../img/4.jpg");
+
+$imgUrl: ("first":"../img/5.jpeg", "second": "../img/6.jpg", "third":"../img/7.jpg");
+
+@mixin navLi {
+  color: #000000;
+  display: inline;
+  text-align: center;
+  cursor: pointer;
+  padding: 20px 30px 10px 10px;
+  font-size: 18px;
+}
+
+$review-bg: #8a6f8d;
+$review-card-bg: #caa2cb;
+
+$search-bg: #9f86a2;
+$search-h3:black;
+$border-bottom:#685667;
+
+$footer-bg:#5d3d85;
+$button-bg:#4f0a5e;

@@ -1,0 +1,45 @@
+.wrapper {
+  text-align: center;
+}
+
+.nickname {
+  margin: 20px;
+}
+
+.btn {
+  margin: 5px;
+  background-color: yellow;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: greenyellow
+}
+
+.btn:active {
+  box-shadow: 0 1px green;
+  transform: translateY(2px);
+}
+
+.me {
+  margin-top: 30px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: blueviolet;
+  color: black;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 9px #999;
+}
+
+.me:hover {
+  background-color: aqua
+}
+
+.me:active {
+  background-color: aqua;
+  box-shadow: 0 5px blueviolet;
+  transform: translateY(4px);
+}
